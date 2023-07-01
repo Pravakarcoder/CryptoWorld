@@ -26,8 +26,10 @@ const Navbar = () => {
       useEffect(() => {
         if(screenSize < 768) {
           setActiveMenu(false);
+        
         } else{
           setActiveMenu(true);
+         
         }
       }, [screenSize]);
 
@@ -67,19 +69,19 @@ const Navbar = () => {
 
     function  func1() {
         navigate("/");
-        setActiveMenu(!activeMenu);
+         
       }
     function func2() {
         navigate("/cryptocurrencies");
-        setActiveMenu(!activeMenu);
+         
       }
     function  func3() {
         navigate("/exchanges");
-        setActiveMenu(!activeMenu);
+        
       }
     function func4() {
         navigate("/news");
-        setActiveMenu(!activeMenu);
+        
       }
     
    
@@ -91,7 +93,7 @@ const Navbar = () => {
               <Link to="/">CryptoWorld</Link>
           </Typography.Title>
 
-          <Button className='menu-control-container' onClick={() => setActiveMenu(!activeMenu)}> 
+          <Button className='menu-control-container' onClick={() => setActiveMenu(!activeMenu)} > 
             <MenuOutlined />
            </Button>
         </div>
@@ -115,4 +117,6 @@ const Navbar = () => {
 export default Navbar   
 
  
+ 
+
  

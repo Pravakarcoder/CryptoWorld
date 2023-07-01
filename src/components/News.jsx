@@ -5,12 +5,13 @@ import moment from 'moment';
  import { useGetCryptoNewsQuery } from '../services/CryptoNewsApi';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import Loader from './Loader';
+import image from '../images/no picture.jpg'
  
  
 const { Text, Title } = Typography;
 const { Option  } = Select;
 
-const demoImage ="https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News";
+const demoImage = image;
 
 
 const News = ({ simplified }) => {
@@ -32,7 +33,7 @@ const News = ({ simplified }) => {
                 filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
               >
                   <Option value="Cryptocurrency">Cryptocurrency</Option>
-                  {data?.data?.coins.map((coin) => <Option value={coin.name}>{coin.name}</Option>)}
+                  {data?.data?.coins.map((coin,index) => <Option key={index} value={coin.name}>{coin.name}</Option>)}
               </Select>
            </Col>
         )}

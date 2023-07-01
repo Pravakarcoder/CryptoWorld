@@ -26,7 +26,7 @@ export const cryptoApi = createApi({
             getCryptoHistory: bulider.query({
                 query: ({coinId,  timePeriod}) => createRequest(`/coin/${coinId}/history/${timePeriod}`),
 
-                // query: ({ coinId, timeperiod }) => createRequest(`coin/${coinId}/history?timeperiod=${timeperiod}`),
+                //query: ({ coinId, timeperiod }) => createRequest(`coin/${coinId}/history?timeperiod=${timeperiod}`),
             }),
    })
 }); 
